@@ -36,7 +36,7 @@ namespace InsitenWebAPI.Controllers
 
         private string ReturnStr()
         {
-            return "test ok - 5";
+            return "test ok - 7";
         }
 
         /// <summary>
