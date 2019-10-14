@@ -25,6 +25,20 @@ namespace InsitenWebAPI.Controllers
             _dataService = dataService;
         }
 
+        [HttpGet]
+        [Route("Test")]
+        public async Task<IActionResult> Test()
+        {
+            var test = Task.Run(() => ReturnStr());
+            
+            return Ok(test.Result);
+        }
+
+        private string ReturnStr()
+        {
+            return "test ok";
+        }
+
         /// <summary>
         /// Get data from database using the parameters provided
         /// </summary>
